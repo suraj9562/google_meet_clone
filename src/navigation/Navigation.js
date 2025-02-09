@@ -7,22 +7,25 @@ import Home from '../screens/Home';
 import JoinMeet from '../screens/JoinMeet';
 import PrepareMeet from '../screens/PrepareMeet';
 import Meet from '../screens/Meet';
+import {WSProvider} from '../service/api/WSProvider';
 
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
   return (
-    <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator
-        initialRouteName="splash"
-        screenOptions={{headerShown: false}}>
-        <Stack.Screen name="splash" component={Splash} />
-        <Stack.Screen name="home" component={Home} />
-        <Stack.Screen name="joinMeet" component={JoinMeet} />
-        <Stack.Screen name="prepareMeet" component={PrepareMeet} />
-        <Stack.Screen name="meet" component={Meet} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <WSProvider>
+      <NavigationContainer ref={navigationRef}>
+        <Stack.Navigator
+          initialRouteName="splash"
+          screenOptions={{headerShown: false}}>
+          <Stack.Screen name="splash" component={Splash} />
+          <Stack.Screen name="home" component={Home} />
+          <Stack.Screen name="joinMeet" component={JoinMeet} />
+          <Stack.Screen name="prepareMeet" component={PrepareMeet} />
+          <Stack.Screen name="meet" component={Meet} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </WSProvider>
   );
 };
 

@@ -4,7 +4,7 @@ import {io} from 'socket.io-client';
 
 const WSContext = createContext(undefined);
 
-export const WSProvider = ({childern}) => {
+export const WSProvider = ({children}) => {
   const socket = useRef();
 
   useEffect(() => {
@@ -50,7 +50,7 @@ export const WSProvider = ({childern}) => {
   };
 
   return (
-    <WSContext.Provider value={socketService}>{childern} </WSContext.Provider>
+    <WSContext.Provider value={socketService}> {children} </WSContext.Provider>
   );
 };
 

@@ -11,7 +11,7 @@ export const headerStyles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 2,
     borderRadius: 10,
-    elevation: 4,
+    elevation: 15,
     padding: 10,
     shadowColor: '#000',
     backgroundColor: '#fff',

@@ -13,7 +13,8 @@ export const createSession = async () => {
 
 export const checkSession = async sessionId => {
   try {
-    const apiRes = await axios.post(
+    console.log(sessionId);
+    const apiRes = await axios.get(
       `${BASE_URL}/is-alive?sessionId=${sessionId}`,
     );
     return apiRes?.data?.isAlive;
@@ -22,5 +23,3 @@ export const checkSession = async sessionId => {
     return false;
   }
 };
-
-

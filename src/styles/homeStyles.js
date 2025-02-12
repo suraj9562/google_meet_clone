@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {Colors, screenHeight, screenWidth} from '../utils/Constants';
 import {RFValue} from 'react-native-responsive-fontsize';
 
@@ -55,16 +55,16 @@ export const homeStyles = StyleSheet.create({
   sessionContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
-    elevation: 2,
+    elevation: 25,
     padding: 15,
     marginVertical: 8,
-    borderRadius: 10,
+    borderRadius: 16,
     shadowColor: '#000',
-    shadowOpacity: 0.1,
+    shadowOpacity: 0.05,
     shadowRadius: 16,
     shadowOffset: {width: 1, height: 1},
     marginHorizontal: 5,
+    backgroundColor: '#fff',
   },
   sessionTextContainer: {
     flex: 1,

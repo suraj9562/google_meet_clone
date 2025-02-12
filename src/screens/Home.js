@@ -69,7 +69,9 @@ const Home = () => {
             Just join and enjoy the party!
           </Text>
         </View>
-        <TouchableOpacity style={homeStyles.joinButton} onPress={{}}>
+        <TouchableOpacity
+          style={homeStyles.joinButton}
+          onPress={() => joinViaSessionId(item)}>
           <Text style={homeStyles.joinButtonText}>Join</Text>
         </TouchableOpacity>
       </View>
@@ -84,7 +86,7 @@ const Home = () => {
         data={sessions}
         renderItem={renderSessions}
         key={item => item}
-        contentContainerStyle={{padding: 20}}
+        contentContainerStyle={{padding: 10}}
         ListEmptyComponent={
           <>
             <Image source={bgImage} style={homeStyles.img} />

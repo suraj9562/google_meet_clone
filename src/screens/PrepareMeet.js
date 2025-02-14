@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {Text, View, Image, TouchableOpacity} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {RTCView, mediaDevices} from 'react-native-webrtc';
 import {useWS} from '../service/api/WSProvider';
@@ -257,5 +257,3 @@ const PrepareMeet = () => {
 };
 
 export default PrepareMeet;
-
-const styles = StyleSheet.create({});

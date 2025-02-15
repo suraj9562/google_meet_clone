@@ -12,7 +12,7 @@ import {
 import {peerConstraints} from '../utils/Helpers';
 
 export const useWebRTC = () => {
-  const {user} = useWS();
+  const {emit, on, off} = useWS();
   const {
     toggle,
     setStreamURL,
@@ -24,8 +24,9 @@ export const useWebRTC = () => {
     micOn,
     participants,
     sessionId,
+    clear,
   } = useMeetStorage();
-  const {emit, on, off} = useUserStorage();
+  const {user} = useUserStorage();
 
   const [localStream, setLocalStream] = useState(null);
   const peerConnections = useRef(new Map());

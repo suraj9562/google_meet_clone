@@ -6,6 +6,7 @@ export const useContainerDimensions = () => {
   const onContainerLayout = event => {
     const {width, height} = event.nativeEvent.layout;
     setContainerDimensions({width, height});
+    console.log({width, height});
   };
 
   return {containerDimensions, onContainerLayout};

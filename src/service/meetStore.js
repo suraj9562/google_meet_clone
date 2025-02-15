@@ -10,6 +10,10 @@ export const useMeetStorage = create()(
     micOn: false,
     videoOn: false,
 
+    clear: () => {
+      set({sessionId: null, participants: [], chatMessages: []});
+    },
+
     addSessionId: id => {
       set({sessionId: id});
     },

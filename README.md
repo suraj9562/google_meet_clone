@@ -1,10 +1,59 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Google Meet Clone App Project
 
-# Getting Started
+## Overview
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+This project is a feature-rich video conferencing application inspired by Google Meet. It provides users with a seamless experience for virtual meetings, allowing them to connect, collaborate, and celebrate from anywhere.
 
-## Step 1: Start Metro
+### Project Screenshots
+
+| ![Main Screen with Update Dialog](./src/assets/images/1.png) | ![Main Screen](./src/assets/images/2.png) | ![Main Screen](./src/assets/images/3.png) | ![Main Screen](./src/assets/images/4.png) | ![Main Screen](./src/assets/images/5.png) |
+| :----------------------------------------------------------: | :---------------------------------------: | :---------------------------------------: | :---------------------------------------: | ----------------------------------------- |
+
+## Features
+
+- **Join or Create Meetings**: Users can create new meetings or join existing ones using a meeting code, ensuring easy accessibility.
+- **User Interface**: A clean and intuitive UI, including:
+  Input field for meeting codes.
+  Prominent "Create New Meet" and "Join" buttons for a user-friendly experience.
+- **Pre-Join Preview**: Before joining a call, users can:
+  Check their audio and video settings.
+  See the meeting link for easy sharing.
+- **Real-Time Video Conferencing**:
+  High-quality video and audio communication.
+  Dynamic grid layout to view multiple participants.
+- **Participant Management**:
+  Display of participant names and profile pictures.
+  Mute/unmute and video on/off controls for privacy.
+
+## Technologies Used
+
+- **Frontend**: React for a responsive and dynamic user interface.
+- **Backend**: Node.js and Express.js for server-side operations and real-time communication.
+- **Real-Time Communication**: Implemented using WebRTC and Socket.IO for smooth video calling and messaging.
+
+# Steps for local set-up
+
+## Step 1: Start Server
+
+First, you will need to run **meet_server**, the backend server for our application.
+
+to run the server, follow the instructions as:
+
+- goto `https://cloud.mongodb.com/` and create a cluster
+- now goto `meet_server` folder and add config file
+- in config file mention
+
+```shell
+MONGO_URI = mongodb+srv://<USER_NAME>:<PASSWORD>@cluster0.jsksd.mongodb.net/google_meet?retryWrites=true&w=majority&appName=Cluster0
+```
+
+- now at the end execute
+
+```sh
+npm run start
+```
+
+## Step 2: Start Metro
 
 First, you will need to run **Metro**, the JavaScript build tool for React Native.
 
@@ -18,7 +67,7 @@ npm start
 yarn start
 ```
 
-## Step 2: Build and run your app
+## Step 3: Build and run your app
 
 With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
 
@@ -62,36 +111,25 @@ If everything is set up correctly, you should see your new app running in the An
 
 This is one way to run your app — you can also build it directly from Android Studio or Xcode.
 
-## Step 3: Modify your app
+## Step 4: Modify your app
 
 Now that you have successfully run the app, let's make changes!
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Open `App.js` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
 
 When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
 
 - **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
 - **iOS**: Press <kbd>R</kbd> in iOS Simulator.
 
-## Congratulations! :tada:
+## Credits 🙌
 
-You've successfully run and modified your React Native App. :partying_face:
+**Tutorial by Ritik Prasad.**
 
-### Now what?
+## License
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more information.
 
-# Troubleshooting
+---
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+### MIT License
